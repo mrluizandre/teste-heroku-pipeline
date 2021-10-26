@@ -1,0 +1,57 @@
+{
+  "addons": [
+    "logentries",
+    "papertrail",
+    "heroku-postgresql",
+    "heroku-redis"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "env": {
+    "DOPPLER_CONFIG": {
+      "required": true
+    },
+    "DOPPLER_ENVIRONMENT": {
+      "required": true
+    },
+    "DOPPLER_PROJECT": {
+      "required": true
+    },
+    "ENV": {
+      "required": true
+    },
+    "LANG": {
+      "required": true
+    },
+    "PAPERTRAIL_API_TOKEN": {
+      "required": true
+    },
+    "RACK_ENV": {
+      "required": true
+    },
+    "RAILS_ENV": {
+      "required": true
+    },
+    "RAILS_LOG_TO_STDOUT": {
+      "required": true
+    },
+    "RAILS_SERVE_STATIC_FILES": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "teste-heroku-pipeline",
+  "scripts": {
+  },
+  "stack": "heroku-20"
+}
