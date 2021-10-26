@@ -1,3 +1,10 @@
-<h1><%= ENV['ENV'] %></h1>
+<h1>Environment ('ENV' var set on config vars): <%= ENV['ENV'] %></h1>
 <h3>Review 3</h3>
 <p>Review 4</p>
+
+<h2>Posts List</h2>
+<ol>
+  <% @posts.each do |post|%>
+    <li><%= post.name %></li>
+  <% end %>
+</ol>
